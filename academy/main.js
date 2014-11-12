@@ -1,24 +1,41 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
+var userChoice = prompt("Do you choose KAMEN, NOGITSI or BUMAGA?");
+console.log(userChoice + " user`s choose");
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
-	computerChoice = "rock";
+	computerChoice = "KAMEN";
 } else if(computerChoice <= 0.67) {
-	computerChoice = "paper";
+	computerChoice = "BUMAGA";
 } else {
-	computerChoice = "scissors";
-} console.log("Computer: " + computerChoice);
-var compare = function(userChoice, computerChoice) {
-    if(userChoice === computerChoice) {
-        return "The result is a tie!";
+	computerChoice = "NOGITSI";
+} console.log("Computer has: " + computerChoice);
+var compare = function(choos1, choos2) {
+    if(choos1 === choos2) {
+        return "PobediLa DruGba =)";
     }
-    else if(userChoice === "rock") {
+     if(choos1 === "NOGITSI") {
         
-        if(computerChoice ==="scissors") {
-            return "rock wins";
+        if(choos2 ==="KAMEN") {
+            return "KaMen6 WiNs";
         }
         else {
-            return "paper wins";
+            if (choos2 === "BUMAGA") {
+                return "NOGITSI wins";
+            }
         }
     }
+    if(choos1 === "KAMEN") {
+        if(choos2 === "NOGITSI") {
+            return "KaMen6 Wins";
+        }
+        else {
+            if(choos2 === "BUMAGA"){
+                return "BUmaGA wins";
+            }
+        }
+    }
+ else {
+        return "Bumaga Wins";
+    }
 };
+compare(userChoice, computerChoice);
 
