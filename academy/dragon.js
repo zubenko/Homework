@@ -19,6 +19,8 @@ while (slaying) {
     else {
         console.log ("Dragon defeated you");
     }
+
+
     slaying=false;
 
 }
